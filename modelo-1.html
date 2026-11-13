@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joss Giant — Biografía | Modelo 01 · Noir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blk:#07070a; --blk2:#0e0e12; --red:#e01b24; --red2:#ff2d3c;
+    --wht:#f5f4f1; --dim:#8e8e96; --line:#1d1d23;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--blk);color:var(--wht);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--red);color:#fff}
+  html.jg-lock,html.jg-lock body{overflow:hidden}
+
+  .wrap{max-width:1440px;margin:0 auto;padding:0 30px}
+  [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  /* ---------- header ---------- */
+  .bar{position:fixed;inset:0 0 auto 0;z-index:60;backdrop-filter:blur(14px);background:#07070ab8;border-bottom:1px solid #ffffff12}
+  .bar__in{display:flex;align-items:center;justify-content:space-between;gap:26px;height:64px}
+  .logo{font-family:Anton,sans-serif;font-size:19px;letter-spacing:.1em;display:flex;align-items:center;gap:9px}
+  .logo s{display:block;width:8px;height:8px;background:var(--red);border-radius:50%}
+  .nav{display:flex;gap:26px}
+  .nav a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#b7b6bc;transition:color .2s}
+  .nav a:hover{color:var(--red2)}
+  .btn-yt{
+    display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;padding:11px 16px;background:var(--red);color:#fff;transition:background .25s,color .25s;
+  }
+  .btn-yt:hover{background:#fff;color:#000}
+
+  /* ---------- hero ---------- */
+  .hero{padding:132px 0 0;position:relative}
+  .hero__in{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:40px;align-items:end}
+  .kicker{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--red2);font-weight:600;margin:0 0 22px;display:flex;align-items:center;gap:12px}
+  .kicker:before{content:"";width:44px;height:1px;background:var(--red)}
+  h1{
+    font-family:Anton,sans-serif;font-weight:400;margin:0;text-transform:uppercase;
+    font-size:clamp(3.4rem,12.4vw,11rem);line-height:.79;letter-spacing:-.025em;
+  }
+  h1 span{display:block;color:var(--red)}
+  .hero__side{padding-bottom:14px}
+  .hero__side p{margin:0 0 26px;font-size:14.5px;line-height:1.72;color:#c6c5cb;font-weight:300}
+  .hero__side p b{color:#fff;font-weight:600}
+  .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ffffff14;border:1px solid #ffffff14}
+  .stat{background:var(--blk);padding:16px 14px}
+  .stat b{display:block;font-family:Anton,sans-serif;font-size:26px;line-height:1;letter-spacing:.01em}
+  .stat span{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-top:7px}
+  .stat:nth-child(2) b{color:var(--red2)}
+
+  .rule{height:1px;background:#ffffff1a;margin-top:56px}
+
+  /* ---------- ticker ---------- */
+  .ticker{background:var(--red);color:#07070a;overflow:hidden;margin-top:0;border-block:1px solid #000}
+  .ticker__row{display:flex;width:max-content;animation:slide 34s linear infinite}
+  .ticker__row span{
+    font-family:Anton,sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;
+    padding:12px 26px;display:flex;align-items:center;gap:26px;white-space:nowrap;
+  }
+  .ticker__row span:after{content:"◆";font-size:9px;opacity:.75}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* ---------- secciones ---------- */
+  section{padding:96px 0}
+  .sec-head{display:grid;grid-template-columns:210px minmax(0,1fr);gap:36px;align-items:start;margin-bottom:44px}
+  .sec-head .lbl{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--red2);font-weight:600;padding-top:9px}
+  .sec-head h2{font-family:Anton,sans-serif;font-weight:400;margin:0;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3.6rem);line-height:.92;letter-spacing:-.01em}
+  .sec-head h2 em{font-style:normal;color:var(--red)}
+  .sec-head p{margin:16px 0 0;max-width:62ch;color:#a8a7ae;font-size:14.5px;line-height:1.75;font-weight:300}
+
+  /* bio */
+  .bio{background:var(--blk2);border-block:1px solid var(--line)}
+  .bio__grid{display:grid;grid-template-columns:210px minmax(0,1fr);gap:36px}
+  .bio__body{max-width:820px;columns:2;column-gap:48px}
+  .bio__body p{margin:0 0 18px;font-size:15px;line-height:1.8;color:#cbcad0;font-weight:300;break-inside:avoid}
+  .bio__body p:first-child:first-letter{
+    font-family:Anton,sans-serif;float:left;font-size:64px;line-height:.78;padding:6px 12px 0 0;color:var(--red);
+  }
+  .bio__body b{color:#fff;font-weight:600}
+  .quote{
+    margin:34px 0 0;padding:24px 0 0;border-top:1px solid #ffffff1c;
+    font-family:Anton,sans-serif;font-size:clamp(1.4rem,3.2vw,2.3rem);line-height:1.1;text-transform:uppercase;letter-spacing:-.01em;
+  }
+  .quote i{color:var(--red);font-style:normal}
+
+  /* ---------- lista de videos ---------- */
+  .vlist{border-top:1px solid var(--line)}
+  .row{
+    all:unset;cursor:pointer;display:grid;grid-template-columns:44px 152px minmax(0,1fr) 104px 64px;
+    gap:22px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);
+    position:relative;transition:background .3s,padding .3s;
+  }
+  .row:before{content:"";position:absolute;inset:0 -30px;background:transparent;transition:background .3s;z-index:0}
+  .row:hover:before{background:#120a0c}
+  .row:hover{padding-left:12px}
+  .row > *{position:relative;z-index:1}
+  .row__n{font-family:Anton,sans-serif;font-size:12px;color:#5c5c66;letter-spacing:.1em;transition:color .3s}
+  .row:hover .row__n{color:var(--red2)}
+  .row__thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111}
+  .row__thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);opacity:.72;transition:filter .4s,opacity .4s,transform .6s}
+  .row:hover .row__thumb img{filter:none;opacity:1;transform:scale(1.05)}
+  .row__thumb .pl{
+    position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .3s;
+    background:#00000059;
+  }
+  .row:hover .row__thumb .pl{opacity:1}
+  .pl i{width:36px;height:36px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10px;background:#e01b2499}
+  .row__t{font-size:17px;font-weight:600;letter-spacing:-.01em;display:block;margin-bottom:5px}
+  .row:hover .row__t{color:#fff}
+  .row__m{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  .row__v{font-family:Anton,sans-serif;font-size:15px;color:#b9b8c0;text-align:right}
+  .row__d{font-size:11px;letter-spacing:.1em;color:#7c7c85;text-align:right}
+  .broken{background:
+    repeating-linear-gradient(135deg,#101014,#101014 10px,#0d0d11 10px,#0d0d11 20px)}
+
+  .shorts{margin-top:56px;border-top:1px solid var(--line);padding-top:28px}
+  .shorts h3{font-family:Anton,sans-serif;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:#9a9aa2;margin:0 0 18px;font-weight:400}
+  .shorts__row{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+  .short{
+    all:unset;cursor:pointer;flex:0 0 108px;aspect-ratio:9/16;position:relative;overflow:hidden;
+    border:1px solid #ffffff1a;background:#101014;
+  }
+  .short img{width:100%;height:100%;object-fit:cover;filter:grayscale(.6) brightness(.66);transition:filter .4s,transform .5s}
+  .short:hover img{filter:none;transform:scale(1.06)}
+  .short span{position:absolute;left:0;right:0;bottom:0;padding:8px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(transparent,#000d);color:#fff}
+
+  /* ---------- trayectoria ---------- */
+  .tl{border-top:1px solid var(--line)}
+  .tl__row{display:grid;grid-template-columns:110px minmax(0,1fr) 190px;gap:30px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .tl__y{font-family:Anton,sans-serif;font-size:30px;color:#3f3f47;transition:color .3s}
+  .tl__row:hover .tl__y{color:var(--red)}
+  .tl__t{font-size:16px;font-weight:600}
+  .tl__d{color:#9c9ba3;font-size:13.5px;line-height:1.65;margin-top:6px;font-weight:300;max-width:70ch}
+  .tl__tagn{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);text-align:right}
+
+  /* ---------- cta ---------- */
+  .cta{background:var(--red);color:#07070a;text-align:center;padding:78px 0}
+  .cta h2{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;margin:0 0 10px;font-size:clamp(2rem,6vw,4.6rem);line-height:.9;letter-spacing:-.02em}
+  .cta p{margin:0 auto 28px;max-width:52ch;font-size:14px;color:#1b0709;font-weight:500}
+  .cta a{
+    display:inline-flex;align-items:center;gap:12px;background:#07070a;color:#fff;
+    padding:17px 30px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    transition:transform .25s,background .25s;
+  }
+  .cta a:hover{transform:translateY(-3px);background:#fff;color:#000}
+
+  footer{padding:40px 0 60px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--dim);letter-spacing:.06em;border-top:1px solid var(--line)}
+  footer a:hover{color:var(--red2)}
+  footer nav{display:flex;gap:20px;flex-wrap:wrap}
+
+  /* ---------- reproductor ---------- */
+  .jg-overlay{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:#000000e6;backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .3s}
+  .jg-overlay.is-open{opacity:1;pointer-events:auto}
+  .jg-modal{width:min(1020px,100%);background:#0b0b0f;border:1px solid #26262e;transform:translateY(18px);transition:transform .38s cubic-bezier(.2,.7,.2,1)}
+  .jg-overlay.is-open .jg-modal{transform:none}
+  .jg-modal__ratio{position:relative;aspect-ratio:16/9;background:#000}
+  .jg-modal__ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .jg-modal__foot{display:flex;align-items:center;gap:16px;padding:16px 20px;border-top:1px solid #1d1d24;flex-wrap:wrap}
+  .jg-modal__tag{font-size:9px;letter-spacing:.24em;color:#e01b24;font-weight:700}
+  .jg-modal__title{font-family:Anton,sans-serif;font-weight:400;font-size:19px;margin:0;flex:1;min-width:140px;letter-spacing:.02em;text-transform:uppercase}
+  .jg-modal__link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#b6b5bc;border-bottom:1px solid #ffffff2e;padding-bottom:2px}
+  .jg-modal__link:hover{color:#fff}
+  .jg-overlay__close{position:absolute;top:20px;right:22px;width:44px;height:44px;display:grid;place-items:center;background:none;border:1px solid #ffffff26;color:#fff;cursor:pointer;transition:background .2s,color .2s}
+  .jg-overlay__close:hover{background:#e01b24;border-color:#e01b24}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1080px){
+    .hero__in{grid-template-columns:1fr}
+    .hero__side{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;padding-top:34px}
+    .sec-head,.bio__grid{grid-template-columns:1fr;gap:14px}
+    .bio__body{columns:1;max-width:none}
+    .row{grid-template-columns:34px 132px minmax(0,1fr) 60px}
+    .row__v{display:none}
+  }
+  @media (max-width:760px){
+    .wrap{padding:0 20px}
+    .nav{display:none}
+    .hero{padding-top:104px}
+    section{padding:64px 0}
+    .hero__side{grid-template-columns:1fr}
+    .row{grid-template-columns:24px 96px minmax(0,1fr);gap:14px;padding:12px 0}
+    .row__t{font-size:14px}
+    .row__d{display:none}
+    .row:hover{padding-left:0}
+    .tl__row{grid-template-columns:64px 1fr;gap:16px}
+    .tl__tagn{display:none}
+    .tl__y{font-size:22px}
+    .hero__stats .stat b{font-size:22px}
+    .jg-modal__foot{padding:13px 14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="logo" href="modelos.html"><s></s>JOSS GIANT</a>
+    <nav class="nav">
+      <a href="#bio">Biografía</a>
+      <a href="#videos">Videos</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="modelos.html">Otros modelos</a>
+    </nav>
+    <a class="btn-yt" href="https://www.youtube.com/@jossgiant?sub_confirmation=1" target="_blank" rel="noopener">Suscribirse ↗</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="hero__in">
+        <div>
+          <p class="kicker">Artista urbano · Colombia · LVDI</p>
+          <h1>Joss<span>Giant</span></h1>
+        </div>
+        <div class="hero__side">
+          <p>Voz de la nueva escena urbana colombiana. <b>Trap, dembow y calle</b> en videos oficiales que acumulan cientos de miles de vistas, desde <b>602 Endo</b> hasta <b>Pin Pan Pin Piru</b>.</p>
+          <div class="hero__stats">
+            <div class="stat"><b>1.99K</b><span>Suscriptores</span></div>
+            <div class="stat"><b>407K</b><span>Vistas totales</span></div>
+            <div class="stat"><b>12</b><span>Videos</span></div>
+            <div class="stat"><b>2017</b><span>En YouTube</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="rule"></div>
+    </div>
+    <div class="ticker" aria-hidden="true" style="margin-top:44px">
+      <div class="ticker__row">
+        <span>Enferma del Sex</span><span>Flow de Malandro</span><span>Pin Pan Pin Piru</span><span>Rafael Leão</span><span>Toy Fugao</span><span>Lero Lero</span><span>602 Endo</span><span>La Independiente</span>
+        <span>Enferma del Sex</span><span>Flow de Malandro</span><span>Pin Pan Pin Piru</span><span>Rafael Leão</span><span>Toy Fugao</span><span>Lero Lero</span><span>602 Endo</span><span>La Independiente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio" id="bio">
+    <div class="wrap">
+      <div class="bio__grid">
+        <div class="lbl" style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--red2);font-weight:600">01 — Biografía</div>
+        <div data-reveal>
+          <div class="sec-head" style="display:block;margin-bottom:26px">
+            <h2>El nombre detrás<br>de <em>LVDI</em></h2>
+          </div>
+          <div class="bio__body">
+            <p><b>Joss Giant</b> es un artista colombiano que construyó su identidad dentro del underground urbano con una premisa simple: la calle primero. Su canal de YouTube, abierto en 2017, funciona como archivo de ese camino: videos oficiales, lyric videos y colaboraciones que van del trap oscuro al dembow bailable.</p>
+            <p>El salto de visibilidad llega con <b>Rafael Leão</b>, el tema que se volvió su video más comentado de 2025, y con <b>Pin Pan Pin Piru</b>, la colaboración junto a White Bear, Conep y Chal 777 que superó las 140 mil reproducciones y lo conectó con el circuito de Puerto Rico.</p>
+            <p>Su sonido se reconoce por el bajo sucio, las voces dobladas y las letras de barrio: <b>Toy Fugao</b>, <b>602 Endo</b>, <b>Lero Lero</b> y <b>La Independiente</b> comparten esa estética de bloques, motos y lealtad. En 2026 publica <b>Enferma del Sex</b> y <b>Flow de Malandro</b>, dos cortes que confirman la veta más cruda del proyecto.</p>
+            <p>Hoy LVDI es más que un alias: es el sello estético de un artista que escribe, graba y dirige su propio imaginario, con un canal que sigue creciendo video a video.</p>
+          </div>
+          <p class="quote">“LA SANGRE <i>MÁS</i> QUE EL DINERO.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lbl">02 — Videografía</div>
+        <div data-reveal>
+          <h2>Todos los <em>videos</em></h2>
+          <p>Los 12 videos publicados en el canal. Haz clic en cualquier fila para reproducirlo aquí mismo.</p>
+        </div>
+      </div>
+      <div class="vlist" id="vlist" data-reveal></div>
+
+      <div class="shorts" data-reveal>
+        <h3>Shorts del canal</h3>
+        <div class="shorts__row" id="shorts"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section id="trayectoria" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lbl">03 — Trayectoria</div>
+        <div data-reveal><h2>Línea de <em>tiempo</em></h2></div>
+      </div>
+      <div class="tl" data-reveal>
+        <div class="tl__row">
+          <div class="tl__y">2017</div>
+          <div><div class="tl__t">Nace el canal</div><div class="tl__d">Joss Giant abre su espacio en YouTube y empieza a subir sus primeras grabaciones desde Colombia.</div></div>
+          <div class="tl__tagn">Origen</div>
+        </div>
+        <div class="tl__row">
+          <div class="tl__y">2024</div>
+          <div><div class="tl__t">Primeros videos oficiales</div><div class="tl__d">Llegan 602 Endo, 27R y Peste a Pólvora junto a Perla: se define la estética de calle del proyecto.</div></div>
+          <div class="tl__tagn">Consolidación</div>
+        </div>
+        <div class="tl__row">
+          <div class="tl__y">2025</div>
+          <div><div class="tl__t">El año de Rafael Leão</div><div class="tl__d">Rafael Leão, Toy Fugao, Nike Blanco, La Independiente y Lero Lero. Además, Pin Pan Pin Piru con White Bear, Conep y Chal 777 supera las 140K vistas.</div></div>
+          <div class="tl__tagn">Crecimiento</div>
+        </div>
+        <div class="tl__row">
+          <div class="tl__y">2026</div>
+          <div><div class="tl__t">Nueva etapa</div><div class="tl__d">Flow de Malandro, el remix de Pelky Walk con Uzziel, Sombra PR y Branlee PR, y el estreno de Enferma del Sex.</div></div>
+          <div class="tl__tagn">Actualidad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <h2>La calle suena<br>como Joss Giant</h2>
+      <p>Suscríbete al canal y escucha cada estreno antes que nadie.</p>
+      <a href="https://www.youtube.com/@jossgiant?sub_confirmation=1" target="_blank" rel="noopener">Ir al canal de YouTube ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;width:100%">
+    <span>© <span data-year></span> Joss Giant · LVDI · Colombia</span>
+    <nav>
+      <a href="https://www.youtube.com/@jossgiant" target="_blank" rel="noopener">YouTube</a>
+      <a href="#videos">Videos</a>
+      <a href="modelos.html">Modelos 01–05</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  // ----- lista de videos -----
+  const list = document.getElementById("vlist");
+  VIDEOS.forEach(function (v, i) {
+    const b = document.createElement("button");
+    b.className = "row";
+    b.type = "button";
+    b.innerHTML =
+      '<span class="row__n">' + String(i + 1).padStart(2, "0") + "</span>" +
+      '<span class="row__thumb"><img src="' + thumb(v.id) + '" alt="' + v.title + '" loading="lazy"' +
+      ' onerror="this.style.display=\'none\';this.parentNode.classList.add(\'broken\')">' +
+      '<span class="pl"><i>▶</i></span></span>' +
+      '<span class="row__main"><span class="row__t">' + v.title + "</span>" +
+      '<span class="row__m">' + v.type + " · " + v.year + (v.note ? " · " + v.note : "") + "</span></span>" +
+      '<span class="row__v">' + fmtViews(v.views) + "</span>" +
+      '<span class="row__d">' + v.duration + "</span>";
+    b.addEventListener("click", function () { JG.play(v.id, v.raw); });
+    list.appendChild(b);
+  });
+
+  // ----- shorts -----
+  const srow = document.getElementById("shorts");
+  SHORTS.forEach(function (s) {
+    const b = document.createElement("button");
+    b.className = "short";
+    b.type = "button";
+    b.innerHTML = '<img src="https://i.ytimg.com/vi/' + s.id + '/oardefault.jpg" alt="' + s.title + '" loading="lazy"' +
+      ' onerror="this.src=\'https://i.ytimg.com/vi/' + s.id + '/hqdefault.jpg\'">' +
+      "<span>" + s.title + "</span>";
+    b.addEventListener("click", function () {
+      window.open("https://www.youtube.com/shorts/" + s.id, "_blank", "noopener");
+    });
+    srow.appendChild(b);
+  });
+</script>
+</body>
+</html>

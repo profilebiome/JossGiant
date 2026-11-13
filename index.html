@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Joss Giant (LVDI): biografía, videografía oficial y todos los videos del canal de YouTube del artista urbano colombiano.">
+<meta name="theme-color" content="#050507">
+<title>Joss Giant — Biografía oficial | LVDI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blk:#050507; --panel:#0d0d11; --red:#e50914; --red2:#ff2b3a;
+    --wht:#fff; --dim:#9b9ba4; --line:#ffffff14;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--blk);color:var(--wht);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--red);color:#fff}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--red2);outline-offset:3px}
+  html.jg-lock,html.jg-lock body{overflow:hidden}
+  .display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em}
+
+  [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .9s ease var(--d,0ms),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+  [data-reveal].is-in{opacity:1;transform:none}
+
+  /* ---------- nav ---------- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+  section[id],header[id]{scroll-margin-top:86px}
+  .nav.solid{background:#050507e6;backdrop-filter:blur(16px);border-color:#ffffff12}
+  .nav__in{max-width:1500px;margin:0 auto;padding:0 34px;height:72px;display:flex;align-items:center;gap:34px}
+  .logo{font-family:"Bebas Neue",sans-serif;font-size:26px;letter-spacing:.06em;color:#fff;display:flex;align-items:center;gap:8px}
+  .logo b{color:var(--red)}
+  .nav__links{display:flex;gap:24px;margin-left:8px}
+  .nav__links a{font-size:12.5px;color:#cfcfd6;letter-spacing:.04em;transition:color .2s}
+  .nav__links a:hover{color:#fff}
+  .nav__right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:99px;background:var(--red);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:background .25s,transform .25s}
+  .pill:hover{background:#fff;color:#000;transform:translateY(-1px)}
+  .ghost{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#c9c9d1;padding:10px 16px;border:1px solid #ffffff2b;border-radius:99px;transition:border-color .2s,color .2s}
+  .ghost:hover{border-color:#fff;color:#fff}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;padding:120px 0 74px;overflow:hidden;background:radial-gradient(120% 100% at 70% 0%,#2a0a0d,#050507 62%)}
+  .hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;transform:scale(1.06);filter:saturate(.9) contrast(1.05);animation:ken 26s ease-in-out infinite alternate}
+  @keyframes ken{to{transform:scale(1.16) translateY(-2%)}}
+  .hero__scrim{position:absolute;inset:0;background:
+    linear-gradient(90deg,#050507 8%,#050507b0 42%,#0505072e 74%,#050507c0 100%),
+    linear-gradient(0deg,#050507 4%,transparent 46%,#05050766 100%)}
+  .hero__grain{position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E")}
+  .hero__in{position:relative;z-index:2;max-width:1500px;margin:0 auto;padding:0 34px;width:100%}
+  .badge{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+  .badge i{width:6px;height:6px;background:var(--red);border-radius:50%;box-shadow:0 0 0 4px #e5091433}
+  .hero h1{font-family:"Bebas Neue",sans-serif;font-weight:400;margin:0;font-size:clamp(4.2rem,15vw,13rem);line-height:.78;letter-spacing:.005em}
+  .hero h1 span{color:var(--red);-webkit-text-stroke:0}
+  .hero__sub{max-width:54ch;margin:20px 0 0;color:#d3d3da;font-size:clamp(.95rem,1.5vw,1.15rem);line-height:1.66;font-weight:300}
+  .hero__sub b{color:#fff;font-weight:600}
+  .hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;align-items:center}
+  .btn-play{display:inline-flex;align-items:center;gap:12px;padding:15px 26px;border:0;border-radius:4px;background:#fff;color:#050507;font-size:13px;font-weight:700;letter-spacing:.02em;cursor:pointer;transition:transform .25s,background .25s;font-family:inherit}
+  .btn-play:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+  .btn-play svg{width:15px;height:15px}
+  .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:4px;border:1px solid #ffffff33;background:#ffffff0f;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .25s,border-color .25s}
+  .btn-ghost:hover{background:#ffffff1f;border-color:#fff}
+  .hero__meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#a3a3ab}
+  .hero__meta span{display:inline-flex;align-items:center;gap:8px}
+  .hero__meta b{color:#fff;font-weight:600}
+  .hero__fade{position:absolute;left:0;right:0;bottom:0;height:110px;background:linear-gradient(transparent,#050507)}
+
+  /* ---------- rails ---------- */
+  .rail-sec{padding:52px 0 20px}
+  .rail-sec__head{max-width:1500px;margin:0 auto 18px;padding:0 34px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+  .rail-sec__head h2{font-family:"Bebas Neue",sans-serif;font-weight:400;margin:0;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:.04em;display:flex;align-items:center;gap:12px}
+  .rail-sec__head h2 em{width:5px;height:20px;background:var(--red);display:block}
+  .rail-sec__head p{margin:6px 0 0;font-size:12.5px;color:var(--dim)}
+  .arrows{display:flex;gap:8px}
+  .arrow{width:38px;height:38px;border-radius:50%;border:1px solid #ffffff26;background:#0d0d11;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s;font-size:13px}
+  .arrow:hover{background:var(--red);border-color:var(--red)}
+  .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 34px 22px;scrollbar-width:none;max-width:1500px;margin:0 auto}
+  .rail::-webkit-scrollbar{display:none}
+  .card{
+    flex:0 0 328px;scroll-snap-align:start;background:var(--panel);border:1px solid #ffffff10;border-radius:6px;
+    overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s;
+    padding:0;text-align:left;font-family:inherit;color:inherit;position:relative;
+  }
+  .card:hover{transform:translateY(-6px) scale(1.02);border-color:#ffffff2e;box-shadow:0 26px 50px -26px #000}
+  .card__shot{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#101015}
+  .card__shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .4s}
+  .card:hover .card__shot img{transform:scale(1.07)}
+  .card__shot:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000000a6,transparent 60%)}
+  .card__play{
+    position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;
+    background:#050507cc;border:1px solid #ffffff38;backdrop-filter:blur(6px);
+    display:grid;place-items:center;color:#fff;z-index:2;transition:background .3s,transform .3s;
+  }
+  .card:hover .card__play{background:var(--red);border-color:var(--red);transform:scale(1.08)}
+  .card__dur{position:absolute;left:10px;bottom:10px;z-index:2;font-size:10.5px;font-weight:600;padding:4px 7px;border-radius:2px;background:#050507b3}
+  .card__live{position:absolute;left:10px;top:10px;z-index:2;font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:var(--red);padding:4px 7px;border-radius:2px}
+  .card__body{display:block;padding:14px 15px 17px}
+  .card__title{display:block;margin:0 0 7px;font-size:14.5px;font-weight:600;line-height:1.35}
+  .card__meta{display:block;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#88888f}
+  .card__meta b{color:#b9b9c1;font-weight:600}
+
+  /* ---------- about ---------- */
+  .about{padding:80px 0;border-top:1px solid var(--line);margin-top:40px;background:linear-gradient(180deg,#0a0a0e,#050507)}
+  .about__in{max-width:1200px;margin:0 auto;padding:0 34px;display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
+  .about h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2rem,4.4vw,3.4rem);line-height:.95;margin:0 0 20px;letter-spacing:.01em}
+  .about h2 em{color:var(--red);font-style:normal}
+  .about p{color:#b6b6be;font-size:14.5px;line-height:1.8;margin:0 0 16px;font-weight:300}
+  .about p b{color:#fff;font-weight:600}
+  .about__stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+  .kpi{background:#ffffff08;border:1px solid #ffffff12;border-radius:6px;padding:18px 16px}
+  .kpi b{display:block;font-family:"Bebas Neue",sans-serif;font-size:34px;line-height:1;color:#fff}
+  .kpi span{display:block;margin-top:6px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#8e8e96}
+  .about__poster{position:relative;border-radius:8px;overflow:hidden;border:1px solid #ffffff17;aspect-ratio:4/5;background:#0d0d11}
+  .about__poster img{width:100%;height:100%;object-fit:cover}
+  .about__poster figcaption{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(transparent,#000000e6)}
+  .about__poster figcaption span{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--red2);font-weight:700}
+  .about__poster figcaption b{display:block;font-family:"Bebas Neue",sans-serif;font-size:24px;letter-spacing:.03em;margin-top:4px}
+
+  /* ---------- short strip ---------- */
+  .shorts{padding:62px 0 20px;border-top:1px solid var(--line)}
+  .shorts .rail{gap:12px}
+  .scard{flex:0 0 168px;aspect-ratio:9/16;position:relative;border-radius:8px;overflow:hidden;border:1px solid #ffffff17;cursor:pointer;background:#0d0d11;padding:0;font-family:inherit}
+  .scard img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .4s;filter:brightness(.8)}
+  .scard:hover img{transform:scale(1.06);filter:none}
+  .scard span{position:absolute;left:0;right:0;bottom:0;padding:10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:left;background:linear-gradient(transparent,#000000dd)}
+
+  footer{border-top:1px solid var(--line);padding:36px 0 56px;margin-top:40px}
+  .foot__in{max-width:1500px;margin:0 auto;padding:0 34px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:11.5px;color:#84848c;letter-spacing:.05em}
+  .foot__in a:hover{color:var(--red2)}
+  .foot__in nav{display:flex;gap:20px;flex-wrap:wrap}
+
+  /* ---------- player ---------- */
+  .jg-overlay{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:26px;background:#000000eb;backdrop-filter:blur(12px);opacity:0;pointer-events:none;transition:opacity .3s}
+  .jg-overlay.is-open{opacity:1;pointer-events:auto}
+  .jg-modal{width:min(1060px,100%);transform:translateY(20px) scale(.98);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .jg-overlay.is-open .jg-modal{transform:none}
+  .jg-modal__ratio{position:relative;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;box-shadow:0 40px 90px -30px #000}
+  .jg-modal__ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .jg-modal__foot{display:flex;align-items:center;gap:16px;padding:16px 4px 0;flex-wrap:wrap}
+  .jg-modal__tag{font-size:9px;letter-spacing:.22em;color:var(--red2);font-weight:700}
+  .jg-modal__title{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:22px;margin:0;flex:1;min-width:150px;letter-spacing:.04em}
+  .jg-modal__link{font-size:11px;letter-spacing:.1em;color:#b9b9c1;border-bottom:1px solid #ffffff38;padding-bottom:2px}
+  .jg-modal__link:hover{color:#fff}
+  .jg-overlay__close{position:absolute;top:20px;right:24px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#ffffff14;border:1px solid #ffffff2b;color:#fff;cursor:pointer;transition:background .2s}
+  .jg-overlay__close:hover{background:var(--red);border-color:var(--red)}
+
+  @media (max-width:900px){
+    .nav__links{display:none}
+    .about__in{grid-template-columns:1fr;gap:38px}
+    .about__poster{max-width:340px}
+  }
+  @media (max-width:640px){
+    .nav__in{padding:0 20px;height:62px;gap:14px}
+    .ghost{display:none}
+    .hero{padding-bottom:46px;min-height:auto;padding-top:150px}
+    .hero__in,.rail-sec__head,.rail,footer .foot__in,.about__in{padding-left:20px;padding-right:20px}
+    .card{flex:0 0 258px}
+    .scard{flex:0 0 132px}
+    .arrows{display:none}
+    .hero__actions .btn-play,.hero__actions .btn-ghost{font-size:12px;padding:13px 18px;width:100%;justify-content:center}
+    .about__stats{gap:10px}
+    .kpi b{font-size:28px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__in">
+    <a class="logo" href="#inicio">JOSS<b>G</b>IANT</a>
+    <div class="nav__links">
+      <a href="#estrenos">Estrenos</a>
+      <a href="#colaboraciones">Colaboraciones</a>
+      <a href="#oficiales">Oficiales</a>
+      <a href="#artista">El artista</a>
+    </div>
+    <div class="nav__right">
+      <a class="ghost" href="modelos.html">Otros modelos</a>
+      <a class="pill" href="https://www.youtube.com/@jossgiant?sub_confirmation=1" target="_blank" rel="noopener">▶ Suscribirse</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <img class="hero__bg" id="heroBg" alt="" aria-hidden="true" decoding="async">
+  <div class="hero__scrim"></div>
+  <div class="hero__grain"></div>
+  <div class="hero__in">
+    <div class="badge"><i></i>Artista destacado · LVDI · Colombia</div>
+    <h1>JOSS<br><span>GIANT</span></h1>
+    <p class="hero__sub">Trap, dembow y calle desde Colombia. <b>12 videos</b>, colaboraciones con la escena de Puerto Rico y un catálogo que no deja de crecer.</p>
+    <div class="hero__actions">
+      <button class="btn-play" id="playFeatured">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Reproducir lo último
+      </button>
+      <a class="btn-ghost" href="https://www.youtube.com/@jossgiant/videos" target="_blank" rel="noopener">Ver canal ↗</a>
+    </div>
+    <div class="hero__meta">
+      <span><b>1.99K</b> suscriptores</span>
+      <span><b>407K</b> vistas</span>
+      <span><b>12</b> videos</span>
+      <span>Desde <b>2017</b></span>
+    </div>
+  </div>
+  <div class="hero__fade"></div>
+</header>
+
+<section class="rail-sec" id="estrenos">
+  <div class="rail-sec__head">
+    <div>
+      <h2><em></em>Últimos estrenos</h2>
+      <p>Lo más reciente del canal, directo al reproductor.</p>
+    </div>
+    <div class="arrows">
+      <button class="arrow" data-dir="-1" data-target="rail1" aria-label="Anterior">‹</button>
+      <button class="arrow" data-dir="1" data-target="rail1" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+  <div class="rail" id="rail1"></div>
+</section>
+
+<section class="rail-sec" id="colaboraciones">
+  <div class="rail-sec__head">
+    <div>
+      <h2><em></em>Colaboraciones</h2>
+      <p>Joss Giant junto a la escena urbana de la región.</p>
+    </div>
+    <div class="arrows">
+      <button class="arrow" data-dir="-1" data-target="rail2" aria-label="Anterior">‹</button>
+      <button class="arrow" data-dir="1" data-target="rail2" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+  <div class="rail" id="rail2"></div>
+</section>
+
+<section class="rail-sec" id="oficiales">
+  <div class="rail-sec__head">
+    <div>
+      <h2><em></em>Todos los videos</h2>
+      <p>La videografía completa: oficiales, lyric videos y feats.</p>
+    </div>
+  </div>
+  <div class="rail" id="rail3"></div>
+</section>
+
+<section class="shorts">
+  <div class="rail-sec__head">
+    <div>
+      <h2><em></em>Shorts</h2>
+      <p>Cortes rápidos del día a día.</p>
+    </div>
+  </div>
+  <div class="rail" id="railShorts"></div>
+</section>
+
+<section class="about" id="artista">
+  <div class="about__in">
+    <div data-reveal>
+      <h2>El nombre detrás de <em>LVDI</em></h2>
+      <p><b>Joss Giant</b> es un artista colombiano que convirtió el underground urbano en su casa. Su canal, abierto en 2017, reúne videos oficiales, lyric videos y colaboraciones que atraviesan el trap oscuro y el dembow bailable.</p>
+      <p>En 2025 llegó <b>Rafael Leão</b>, su tema más comentado, y <b>Pin Pan Pin Piru</b> junto a White Bear, Conep y Chal 777 superó las 140 mil vistas. Entre <b>Toy Fugao</b>, <b>602 Endo</b> y <b>Lero Lero</b> se reconoce su sonido: bajos sucios, voces dobladas y letras de barrio.</p>
+      <p>En 2026 estrena <b>Flow de Malandro</b>, el remix de <b>Pelky Walk</b> con Uzziel, Sombra PR y Branlee PR, y <b>Enferma del Sex</b>.</p>
+      <div class="about__stats">
+        <div class="kpi"><b>1.99K</b><span>Suscriptores</span></div>
+        <div class="kpi"><b>407K</b><span>Vistas totales</span></div>
+        <div class="kpi"><b>12</b><span>Videos publicados</span></div>
+        <div class="kpi"><b>2017</b><span>En YouTube</span></div>
+      </div>
+    </div>
+    <figure class="about__poster" data-reveal>
+      <img id="posterImg" alt="Joss Giant" loading="lazy">
+      <figcaption><span>Artista</span><b>JOSS GIANT · LVDI</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <div class="foot__in">
+    <span>© <span data-year></span> Joss Giant · Contenido del canal oficial de YouTube</span>
+    <nav>
+      <a href="https://www.youtube.com/@jossgiant" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="modelos.html">Modelos 01–05</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  var featured = VIDEOS.find(function (v) { return v.featured; }) || VIDEOS[0];
+
+  // carga de miniaturas con respaldo: maxres -> sd -> hq
+  function setImg(el, id) {
+    var steps = ["maxresdefault", "sddefault", "hqdefault"];
+    var i = 0;
+    function next() {
+      if (i >= steps.length) return;
+      el.onerror = function () { i += 1; next(); };
+      el.src = "https://i.ytimg.com/vi/" + id + "/" + steps[i] + ".jpg";
+    }
+    next();
+  }
+
+  setImg(document.getElementById("heroBg"), featured.id);
+  setImg(document.getElementById("posterImg"), "5YvyiDbPvc8");
+
+  document.getElementById("playFeatured").addEventListener("click", function () {
+    JG.play(featured.id, featured.raw);
+  });
+
+  function card(v) {
+    var el = document.createElement("button");
+    el.className = "card";
+    el.type = "button";
+    el.innerHTML =
+      '<span class="card__shot">' +
+      '<img src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg" alt="' + v.title + '" loading="lazy">' +
+      (v.featured ? '<span class="card__live">Destacado</span>' : "") +
+      '<span class="card__dur">' + v.duration + "</span>" +
+      '<span class="card__play"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' +
+      "</span>" +
+      '<span class="card__body"><span class="card__title">' + v.title + "</span>" +
+      '<span class="card__meta">' + v.type + " · <b>" + fmtViews(v.views) + " vistas</b> · " + v.year + "</span></span>";
+    el.setAttribute("aria-label", "Reproducir " + v.title);
+    el.addEventListener("click", function () { JG.play(v.id, v.raw); });
+    return el;
+  }
+
+  function fill(id, items) {
+    var rail = document.getElementById(id);
+    items.forEach(function (v) { rail.appendChild(card(v)); });
+  }
+
+  fill("rail1", VIDEOS.slice(0, 6));
+  fill("rail2", VIDEOS.filter(function (v) {
+    return v.type === "Colaboración" || v.type.indexOf("Feat.") === 0;
+  }));
+  fill("rail3", VIDEOS);
+
+  var railShorts = document.getElementById("railShorts");
+  SHORTS.forEach(function (s) {
+    var el = document.createElement("button");
+    el.className = "scard";
+    el.type = "button";
+    el.innerHTML = '<img src="https://i.ytimg.com/vi/' + s.id + '/oardefault.jpg" alt="' + s.title + '" loading="lazy"' +
+      ' onerror="this.src=\'https://i.ytimg.com/vi/' + s.id + '/hqdefault.jpg\'">' +
+      "<span>" + s.title + " · " + fmtViews(s.views) + "</span>";
+    el.addEventListener("click", function () {
+      window.open("https://www.youtube.com/shorts/" + s.id, "_blank", "noopener");
+    });
+    railShorts.appendChild(el);
+  });
+
+  document.querySelectorAll(".arrow").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var rail = document.getElementById(btn.dataset.target);
+      rail.scrollBy({ left: Number(btn.dataset.dir) * Math.min(rail.clientWidth * 0.8, 700), behavior: "smooth" });
+    });
+  });
+
+  var nav = document.getElementById("nav");
+  function onScroll() {
+    nav.classList.toggle("solid", window.scrollY > 40);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
